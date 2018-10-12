@@ -1,6 +1,6 @@
 # Python Practice 
 
- ```{python}
+ ```python
 from IPython.display import display, Math, Latex
 display(Math(r'\sqrt{a^2 + b^2}')) 
 
