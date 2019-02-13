@@ -8,14 +8,14 @@ import pygame
 import numpy as np
 
 pygame.init()
-size = (300, 200)
+size = width, height = 600, 400
 screen = pygame.display.set_mode(size) 
-yellow = pygame.Color('yellow')
-blue = pygame.Color('blue')
+white = pygame.Color('white')
+black = pygame.Color('black')
 done = True
 fps = 100
 clock = pygame.time.Clock()
-screen.fill(blue)
+screen.fill(black)
 k=0
 centers = []
 direct = []
@@ -31,12 +31,12 @@ while done:
             k = 1
     pygame.display.flip()
     while k == 1:
-        screen.fill(blue)
+        screen.fill(black)
         for i in range(len(centers)):
-            pygame.draw.circle(screen, yellow, centers[i], w)
-            if (centers[i][1] == 5) or (centers[i][1] == 200-5) :
+            pygame.draw.circle(screen, white, centers[i], w)
+            if (centers[i][1] == 10) or (centers[i][1] == height-10) :
                 direct[i][1] *= -1
-            if (centers[i][0] == 300-5) or (centers[i][0] == 5) :
+            if (centers[i][0] == width-10) or (centers[i][0] == 10) :
                 direct[i][0] *= -1
             centers[i][0]+=direct[i][0]
             centers[i][1]+=direct[i][1]
